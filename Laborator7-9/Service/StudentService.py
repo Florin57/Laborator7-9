@@ -16,7 +16,6 @@ class StudentService:
         self.repository.addStudent(student)
 
     def modifyStudent(self,id,nume):
-
         self.repository.modifyStudent(id,nume)
 
     def deleteStudent(self,id):
@@ -25,8 +24,12 @@ class StudentService:
 
     def getAllStudenti(self):
 
-        return self.repository.getAllStudenti()
+        return self.repository.getAllStudents()
 
     def cautareStudent(self,id_student):
 
         return self.repository.cautareStudent(id_student)
+
+    def getRandomStudent(self):
+        return self.repository.getRandomStudent()
+

@@ -13,8 +13,12 @@ class StudentValidatorException(Exception):
 class StudentValidator:
 
    def ValidateStudent(self, s: Student):
+        """
+        Validate a Student
+        :param s:
+        :return:
+        """
         errors = ""
-        id_student=0
         try:
             if (int(s.getIDStudent()) < 0):
                 errors += "Invalid Student Id!"

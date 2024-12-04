@@ -21,30 +21,22 @@ class MaterieRepository:
         Functie care adauga clientul in lista de clienti
         :param client: parametru de tip client
         """
-        for materie in self.__materii:
-            if(materie.GetIDMaterie()==materie.GetIDMaterie()):
+        for m in self.__materii:
+            if(m.GetIDMaterie()==materie.GetIDMaterie()):
                 raise MaterieRepositoryException()
 
         self.__materii.append(materie)
 
     def modifyMaterie(self, idMaterie,nume,profesor):
-        """
-        Functie care modifica clientul in lista de clienti
-        :param id: de tip int
-        :param nume:
-        :param prenume:
-        :param cnp:
-        Daca clientul cu id nu exista se ridica o eroare
-        """
         ok=False
         for materie in self.__materii:
-            if(int(materie.GetIDMaterie())== idMaterie):
+            if (int(materie.GetIDMaterie()) == idMaterie):
                 if(nume!=""):
                     materie.SetNumeMaterie(nume)
                 if(len(str(idMaterie))>0):
                     materie.SetIDMaterie(str(idMaterie))
                 if(profesor!=""):
-                    materie.SetProfesorMaterie(profesor)
+                    materie.setProfesor(profesor)
                 ok=True
         if(ok==False):
             raise MaterieRepositoryException()

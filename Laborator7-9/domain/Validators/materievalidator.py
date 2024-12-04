@@ -9,6 +9,11 @@ class MaterieValidatorException(Exception):
 class MaterieValidator:
 
     def ValidateMaterie(self, m:Materie):
+        """
+
+        :param m: Materie(id_materie,Nume,Profesor)
+        :return:
+        """
         errors = ""
         id_materie = 0
         try:
